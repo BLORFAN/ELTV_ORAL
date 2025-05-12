@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STI2D Final Oral Project Tutorial</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .step {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .tip {
+            background-color: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background-color: #fde8e8;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .interactive {
+            background-color: #f0f7eb;
+            border-left: 4px solid #2ecc71;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .hidden {
+            display: none;
+        }
+        .checklist-item {
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>STI2D Final Oral Project Guide- Mrs TROTTER & M.BLORFAN Lycée Marcel RUDLOFF 20255</h1>
+    
+    <div class="step">
+        <h2><span class="step-number">1</span> Understanding the Requirements</h2>
+        <p>The STI2D final oral exam lasts 20 minutes and consists of 3 parts:</p>
+        <ul>
+            <li>5 minutes of standing presentation (without notes)</li>
+            <li>10 minutes of discussion with the jury</li>
+            <li>5 minutes discussing your future study plans</li>
+        </ul>
+        
+        <img src="images/project.png" alt="Final oral exam structure">
+        
+        <div class="tip">
+            <p><strong>Tip:</strong> Your presentation should demonstrate how your STI2D project addresses a technical problem related to your specialty subjects.</p>
+        </div>
+    </div>
+    
+    <div class="step">
+        <h2><span class="step-number">2</span> Choosing Your Topic</h2>
+        <p>Your topic should:</p>
+        <ul>
+            <li>Be related to your STI2D specialties</li>
+            <li>Address a concrete technical problem</li>
+            <li>Show your personal reflection</li>
+            <li>Present innovative solutions</li>
+        </ul>
+        
+        <div class="interactive">
+            <h3>Possible Topic Examples:</h3>
+            <button onclick="showExample('example1')">ITEC</button>
+            <button onclick="showExample('example2')">EE</button>
+            <button onclick="showExample('example3')">SIN</button>
+            <button onclick="showExample('example4')">AC</button>
+            
+            <div id="example1" class="hidden">
+                <p><strong>ITEC (Innovation Technology and Eco-Design):</strong> "How to optimize the design of a mechanical system to reduce its environmental impact while maintaining performance?"</p>
+            </div>
+            <div id="example2" class="hidden">
+                <p><strong>EE (Energy and Environment):</strong> "To what extent can a home automation solution contribute to energy management in a household?"</p>
+            </div>
+            <div id="example3" class="hidden">
+                <p><strong>SIN (Digital Information Systems):</strong> "How to secure data in an IoT system while ensuring its accessibility?"</p>
+            </div>
+            <div id="example4" class="hidden">
+                <p><strong>AC (Architecture and Construction):</strong> "What architectural solutions allow for both thermal comfort and reduced carbon footprint in buildings?"</p>
+            </div>
+        </div>
+        
+        <img src="https://www.reseau-canope.fr/fileadmin/user_upload/_processed_/c/6/csm_CANOPE_VERT_RVB-petit_1f81555519.png" alt="Topic examples for final oral">
+    </div>
+    
+    <div class="step">
+        <h2><span class="step-number">3</span> Structuring Your Presentation</h2>
+        <p>Structure your presentation in 3 clear parts:</p>
+        <ol>
+            <li><strong>Introduction:</strong> Present the problem and its context</li>
+            <li><strong>Development:</strong> Explain your approach and solutions</li>
+            <li><strong>Conclusion:</strong> Answer the problem and discuss future perspectives</li>
+        </ol>
+        
+        <div class="interactive">
+            <h3>Typical Structure:</h3>
+            <button onclick="toggleSection('intro')">Introduction</button>
+            <button onclick="toggleSection('dev')">Development</button>
+            <button onclick="toggleSection('conclu')">Conclusion</button>
+            
+            <div id="intro" class="hidden">
+                <ul>
+                    <li>Hook (statistic, quote, question)</li>
+                    <li>Project context</li>
+                    <li>Clear problem statement</li>
+                    <li>Outline of your presentation</li>
+                </ul>
+            </div>
+            <div id="dev" class="hidden">
+                <ul>
+                    <li>Presentation of your approach</li>
+                    <li>Technical solutions considered</li>
+                    <li>Critical analysis of solutions</li>
+                    <li>Results obtained</li>
+                </ul>
+            </div>
+            <div id="conclu" class="hidden">
+                <ul>
+                    <li>Answer to the problem</li>
+                    <li>Critical summary</li>
+                    <li>Improvement perspectives</li>
+                    <li>Connection to your future plans</li>
+                </ul>
+            </div>
+        </div>
+        
+        <img src="images/grand-oral-notation.png" alt="Presentation structure">
+    </div>
+    
+    <div class="step">
+        <h2><span class="step-number">4</span> Preparing Visual Aids</h2>
+        <p>You can use visual aids (not evaluated) to illustrate your presentation:</p>
+        <ul>
+            <li>Maximum 3 slides (PowerPoint, Prezi, etc.)</li>
+            <li>Focus on diagrams, prototype photos, graphs</li>
+            <li>Avoid long texts</li>
+        </ul>
+        
+        <div class="warning">
+            <p><strong>Warning:</strong> Visual aids are only support - your oral presentation should be understandable without them.</p>
+        </div>
+        
+        <img src="https://pedagogie.ac-reunion.fr/fileadmin/_processed_/4/0/csm_visuel-diapo-grand-oral_d17f7be048.png" alt="Visual aid example">
+    </div>
+    
+    <div class="step">
+        <h2><span class="step-number">5</span> Practicing Your Presentation</h2>
+        <p>To succeed:</p>
+        <ul>
+            <li>Practice in front of a mirror, then with friends/family</li>
+            <li>Time yourself to respect the 5-minute limit</li>
+            <li>Work on your posture and voice</li>
+            <li>Anticipate possible questions</li>
+        </ul>
+        
+        <div class="interactive">
+            <h3>Practice Checklist:</h3>
+            <div class="checklist-item"><input type="checkbox" id="check1"> <label for="check1">I respected the 5-minute time limit</label></div>
+            <div class="checklist-item"><input type="checkbox" id="check2"> <label for="check2">My introduction is clear and engaging</label></div>
+            <div class="checklist-item"><input type="checkbox" id="check3"> <label for="check3">I articulated well and spoke loudly enough</label></div>
+            <div class="checklist-item"><input type="checkbox" id="check4"> <label for="check4">I maintained eye contact</label></div>
+            <div class="checklist-item"><input type="checkbox" id="check5"> <label for="check5">My conclusion is impactful</label></div>
+        </div>
+        
+        <img src="https://i.ytimg.com/vi/9p1kfkpsYzQ/maxresdefault.jpg" alt="Student giving oral presentation">
+          <li><a href="https://www.youtube.com/watch?v=9p1kfkpsYzQ">French Ministry of Education page (in French)</a></li>  
+
+
+</div>
+    
+    <div class="step">
+        <h2><span class="step-number">6</span> Handling the Q&A Session</h2>
+        <p>During the 10-minute discussion:</p>
+        <ul>
+            <li>Listen carefully to the questions</li>
+            <li>Take a few seconds to structure your answer</li>
+            <li>Admit if you don't know an answer</li>
+            <li>Stay calm and professional</li>
+        </ul>
+        
+        <div class="tip">
+            <p><strong>Tip:</strong> The jury wants to assess your ability to discuss, not trap you. An answer like "I haven't studied this aspect but I think that..." shows your reasoning skills.</p>
+        </div>
+    </div>
+    
+    <div class="step">
+        <h2><span class="step-number">7</span> Preparing the Future Plans Discussion</h2>
+        <p>The final 5 minutes focus on your study plans:</p>
+        <ul>
+            <li>Present your chosen study path</li>
+            <li>Explain how your STI2D project contributes to it</li>
+            <li>Be authentic and thoughtful</li>
+        </ul>
+        
+        <img src="https://r.mobirisesite.com/77665/assets/images/poursuite-etudes-400x300.png?v=1QtqPE" alt="STI2D study paths">
+    </div>
+    
+    <div class="step">
+        <h2>Additional Resources</h2>
+        <p>To go further:</p>
+        <ul>
+            <li><a href="https://www.education.gouv.fr/le-grand-oral-305348" target="_blank">French Ministry of Education page (in French)</a></li>
+            <li><a href="https://www.onisep.fr/Choisir-mes-etudes/Au-lycee-au-CFA/Au-lycee-general-et-technologique/Le-bac-2021/Le-grand-oral" target="_blank">ONISEP information sheets (in French)</a></li>
+            <li><a href="https://eduscol.education.fr/729/presentation-du-grand-oral" target="_blank">Eduscol resources (in French)</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function showExample(exampleId) {
+            // Hide all examples first
+            document.querySelectorAll('.interactive div').forEach(div => {
+                div.classList.add('hidden');
+            });
+            // Show the selected one
+            document.getElementById(exampleId).classList.remove('hidden');
+        }
+        
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
